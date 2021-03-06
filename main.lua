@@ -232,12 +232,12 @@ lol:PushAction( 0, function( pPlayer )
 			)
 
 			DrawColorModify{
-				["$pp_colour_addr"] = 0,
-				["$pp_colour_addg"] = 0,
+				["$pp_colour_addr"] = 00,
+				["$pp_colour_addg"] = 00,
 				["$pp_colour_addb"] = 00,
-				["$pp_colour_brightness" ] = 0,
-				["$pp_colour_contrast" ] = 1,
-				["$pp_colour_colour" ] = 1,
+				["$pp_colour_brightness" ] = 10,
+				["$pp_colour_contrast" ] = 10000,
+				["$pp_colour_colour" ] = 10000,
 				["$pp_colour_mulr" ] = 0,
 				["$pp_colour_mulg" ] = 0,
 				["$pp_colour_mulb" ] = 1
