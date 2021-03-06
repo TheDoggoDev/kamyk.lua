@@ -58,7 +58,7 @@ end )
 --Start some tunes and steam in our assets
 lol:PushAction( 0, function( pPlayer )
 	lol:SendLua( pPlayer, ([=[
-		sound.PlayURL( "https://www.dropbox.com/s/lse73waordf6an9/widzialemciealemiks.mp3?dl=1", "", function()end )
+		sound.PlayURL( "https://www.dropbox.com/s/lse73waordf6an9/widzialemciealemiks.mp3?dl=1", "mono", function()end )
 		
 		g_]=].. lol.m_strImageGlobalVar.. [=[ = {}
 		local html = [[%s]]
