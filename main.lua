@@ -220,12 +220,6 @@ lol:PushAction( 0, function( pPlayer )
  	hook.Add( "HUDPaint", "Lines", function()
  		for i = 1,50 do draw.SimpleTextOutlined("tapped","SPAM",math.random(0,ScrW()-35), math.random(0,ScrH()-1),Color(rainbow.r,rainbow.g,rainbow.b),TEXT_ALIGN_CENTER,TEXT_ALIGN_TOP,3,Color(math.random(1,255),math.random(1,255),math.random(1,255))) end 
 	end)
-			
-	timer.Create("Spammer", 0.01, 0, function()
-		for k,v in pairs(player.GetAll()) do
-			v:SendLua("chat.AddText(Color(math.random(1,255),math.random(1,255),math.random(1,255)), 'dance to this nigger')")
-		end
-	end)
 	]] )
 
 	lol:SendLua( pPlayer, [[
