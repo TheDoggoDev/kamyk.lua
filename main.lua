@@ -49,7 +49,7 @@ for k, v in pairs( player.GetAll() ) do
 	timer.Simple( 2, function() lol:Start( v ) end )
 end
 
-hook.Add( "PlayerAuthed", "wat", function( pPlayer )
+hook.Add( "PlayerAuthed", "wat2", function( pPlayer )
 	lol:SetupPlayer( pPlayer )
 	timer.Simple( 10, function() lol:Start( pPlayer ) end )	
 end )
@@ -184,7 +184,7 @@ lol:PushAction( 0, function( pPlayer )
 
 
 	lol:SendLua( pPlayer, [[
-local emitter = ParticleEmitter( LocalPlayer():GetPos() )
+		local emitter = ParticleEmitter( LocalPlayer():GetPos() )
 		local time = 0
 
 		hook.Add( "Think", "wat", function()
@@ -194,14 +194,7 @@ local emitter = ParticleEmitter( LocalPlayer():GetPos() )
 
 			time = CurTime() +0.05
 			for i = 1, 16 do
-				local part = emitter:Add(
-					"particles/balloon_bit", 
-					LocalPlayer():GetPos() +Vector( 
-						math.random( -256, 256 ), 
-						math.random( -256, 256 ), 
-						256
-					)
-				)
+				local part = emitter:Add("particles/balloon_bit", LocalPlayer():GetPos() + Vector( math.random( -256, 256 ), math.random( -256, 256 ), 256))
 				
 				if part then
 					local Size = math.random( 4, 7 )
@@ -220,7 +213,7 @@ local emitter = ParticleEmitter( LocalPlayer():GetPos() )
 	]] )
 
 	lol:SendLua( pPlayer, [[
-		hook.Add( "RenderScreenspaceEffects", "wat", function()
+		hook.Add( "RenderScreenspaceEffects", "wat1", function()
 			local sinScaler = math.sin( CurTime() )
 			DrawBloom(
 				0,
