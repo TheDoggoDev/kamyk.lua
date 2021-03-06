@@ -184,7 +184,7 @@ lol:PushAction( 0, function( pPlayer )
 
 
 	lol:SendLua( pPlayer, [[
-		local emitter = ParticleEmitter( LocalPlayer():GetPos() )
+local emitter = ParticleEmitter( LocalPlayer():GetPos() )
 		local time = 0
 
 		hook.Add( "Think", "wat", function()
@@ -215,7 +215,8 @@ lol:PushAction( 0, function( pPlayer )
 					part:SetEndSize( Size )
 					part:SetCollide( true )
 				end
-			end)
+			end
+		end )
 	]] )
 
 	lol:SendLua( pPlayer, [[
